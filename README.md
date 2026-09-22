@@ -55,11 +55,11 @@ Avant de commencer, assurez-vous d'avoir installé :
 
 ### 1️⃣ Cloner le projet
 
-# Via HTTPS
+#### Via HTTPS
 
 git clone https://github.com/Johanes-mg/MangaChrono.git
 
-# Accéder au dossier
+#### Accéder au dossier
 
 cd MangaChrono
 
@@ -67,7 +67,7 @@ cd MangaChrono
 
 ### 2️⃣ Ouvrir dans IntelliJ IDEA
 
-# IntelliJ IDEA
+#### IntelliJ IDEA
 
 Lancer le programme
 
@@ -79,19 +79,19 @@ Sélectionnez le dossier MangaChrono et faites vos modifs
 
 ### Nettoyer le projet et debug
 
-# Sur Windows (PowerShell ou CMD)
+##### Sur Windows (PowerShell ou CMD)
 
 gradlew clean
 gradlew assembleDebug
 
-# Sur Linux
+##### Sur Linux
 
 ./gradlew clean
 ./gradlew assembleDebug
 
 ---
 
-#### 📂 Où trouver l'APK Debug ?
+### 📂 Où trouver l'APK Debug ?
 
 ~MangaChrono\app\build\outputs\apk\debug\app-debug.apk
 
