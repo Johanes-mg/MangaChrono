@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="manga_red">#E53935</color>
+    <color name="manga_black">#0D0D0D</color>
+    <color name="manga_white">#FAFAFA</color>
+</resources>

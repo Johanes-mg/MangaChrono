@@ -1,0 +1,247 @@
+package com.mangajojoh.mg.data
+
+import kotlin.random.Random
+
+object QuestionBank {
+
+    val questions: List<Question> = listOf(
+        // ============ SHONEN CLASSIQUES (1-10) ============
+        Question(1, "Dragon Ball", "Dans Dragon Ball, qui est le tout premier ennemi que Goku affronte dans la serie ?",
+            listOf("Vegeta", "Pilaf", "Freezer", "Piccolo"), 1, 3),
+        Question(2, "One Piece", "Dans One Piece, quelle est la particularite de Luffy apres avoir mange son Fruit du Demon ?",
+            listOf("Son corps entier devient elastique", "Il peut se transformer en phenix de feu", "Ses bras se changent en epees d'acier", "Il devient invisible dans l'eau de mer"), 0, 2),
+        Question(3, "Naruto", "Dans Naruto, quel demon a queues est scelle en Naruto Uzumaki depuis sa naissance ?",
+            listOf("Shukaku, le demon a une queue", "Kyubi, le renard a neuf queues", "Matatabi, le chat de feu", "Gyuki, le poupe-taureau"), 1, 2),
+        Question(4, "Bleach", "Dans Bleach, quelle est la fonction principale d'un Shinigami ?",
+            listOf("Capturer les criminels humains", "Trouver des tresors caches", "Purifier les Hollows et guider les ames vers la Soul Society", "Enseigner les arts martiaux"), 2, 3),
+        Question(5, "Hunter x Hunter", "Dans Hunter x Hunter, quel est le nom de l'examen ultra-difficile que Gon passe au debut ?",
+            listOf("L'examen de selection des Ninja", "L'examen de Hunter", "Le tournoi du Pouvoir celeste", "L'epreuve des Chevaliers de Cristal"), 1, 3),
+        Question(6, "Fairy Tail", "Dans Fairy Tail, de quel element Natsu Dragnir utilise-t-il la magie de Chasseur de Dragon ?",
+            listOf("L'Electricite", "La Glace", "Le Feu", "Le Vent"), 2, 1),
+        Question(7, "Saint Seiya", "Dans Saint Seiya, quelle deesse Seiya et ses compagnons doivent-ils proteger ?",
+            listOf("Aphrodite", "Athena", "Artemis", "Hera"), 1, 3),
+        Question(8, "Yu-Gi-Oh!", "Dans Yu-Gi-Oh!, quelle est la carte emblematique de Seto Kaiba ?",
+            listOf("Le Magicien Sombre", "Exodia le Maudit", "Le Dragon Blanc aux Yeux Bleus", "Le Dragon Noir aux Yeux Rouges"), 2, 2),
+        Question(9, "JoJo", "Dans JoJo's Bizarre Adventure Partie 3, comment s'appelle le Stand de Jotaro Kujo ?",
+            listOf("Star Platinum", "The World", "Hermit Purple", "Crazy Diamond"), 0, 3),
+        Question(10, "My Hero Academia", "Dans My Hero Academia, de qui Deku herite-t-il son alter One For All ?",
+            listOf("De son pere biologique", "D'All Might", "De Tomura Shigaraki", "De son professeur Eraser Head"), 1, 2),
+
+        // ============ SUCCES MODERNES (11-20) ============
+        Question(11, "Demon Slayer", "Dans Demon Slayer, comment s'appelle la petite soeur de Tanjiro transformee en demon ?",
+            listOf("Kanao", "Shinobu", "Nezuko", "Mitsuri"), 2, 1),
+        Question(12, "Jujutsu Kaisen", "Dans Jujutsu Kaisen, quel objet maudit Yuji avale-t-il dans le premier episode ?",
+            listOf("Un oeil desseche", "Un doigt de Sukuna", "Une dague ancienne", "Un parchemin de sang"), 1, 2),
+        Question(13, "L'Attaque des Titans", "Dans L'Attaque des Titans, quel est le pouvoir unique du Titan Assaillant d'Eren ?",
+            listOf("Generer une armure de cristal", "Mesurer plus de 60 metres", "Voir les souvenirs de ses futurs heritiers", "Controler mentalement les animaux"), 2, 4),
+        Question(14, "Chainsaw Man", "Dans Chainsaw Man, quelle peur donne vie au Demon d'Aki Hayakawa ?",
+            listOf("Le Demon-Flingue", "Le Demon-Tenebres", "Le Demon-Enfer", "Le Demon-Chauve-souris"), 0, 3),
+        Question(15, "Tokyo Ghoul", "Dans Tokyo Ghoul, de quelle couleur deviennent les yeux des goules affamees ?",
+            listOf("Blanc et bleu brillant", "Noir avec pupille rouge (Kakugan)", "Vert fluorescent", "Entierement violet fonce"), 1, 2),
+        Question(16, "One-Punch Man", "Dans One-Punch Man, pourquoi King est-il vu comme le heros le plus fort ?",
+            listOf("Il a une telekinesie superieure", "Il manipule le temps", "Il s'est retrouve par hasard sur les lieux des victoires de Saitama", "Il a vaincu le roi des profondeurs"), 2, 3),
+        Question(17, "Black Clover", "Dans Black Clover, quelle est la particularite d'Asta ?",
+            listOf("Mana infini", "Aucune once de magie en lui", "Magie seulement en dormant", "Magie sur les plantes"), 1, 2),
+        Question(18, "Dr. Stone", "Dans Dr. Stone, quel materiau Senku utilise-t-il pour le premier antibiotique ?",
+            listOf("Du plastique recycle", "Des sulfamides", "Du venin de serpent purifie", "Des feuilles de bambou"), 1, 4),
+        Question(19, "Fire Force", "Dans Fire Force, comment appelle-t-on les humains en combustion spontanee ?",
+            listOf("Les Cendres", "Les Torches Humaines (Infernaux)", "Les Pyromanes", "Les Eteints"), 1, 3),
+        Question(20, "The Promised Neverland", "Dans The Promised Neverland, quel numero Emma porte-t-elle sur le cou ?",
+            listOf("99999", "63194", "81194", "22194"), 3, 4),
+
+        // ============ SEINEN & THRILLERS (21-30) ============
+        Question(21, "Death Note", "Dans Death Note, quel fruit Ryuk adore-t-il au point d'en etre dependant ?",
+            listOf("Les bananes", "Les pommes", "Les oranges", "Les fraises"), 1, 2),
+        Question(22, "Berserk", "Dans Berserk, qui sacrifie ses hommes lors de l'Eclipse ?",
+            listOf("Casca", "Griffith", "Judeau", "Pippin"), 1, 2),
+        Question(23, "Vinland Saga", "Dans Vinland Saga, de quelle culture sont les guerriers mis a l'honneur ?",
+            listOf("Romains", "Vikings (Scandinaves)", "Samourais japonais", "Conquistadors espagnols"), 1, 1),
+        Question(24, "Monster", "Dans Monster, quel est le metier initial du Dr Kenzo Tenma ?",
+            listOf("Detective prive", "Neurochirurgien", "Avocat penaliste", "Professeur d'archeologie"), 1, 2),
+        Question(25, "Evangelion", "Dans Neon Genesis Evangelion, de quelle couleur sont les cheveux de Rei Ayanami ?",
+            listOf("Rouges flamboyants", "Bleus clairs", "Bruns fonces", "Blonds dores"), 1, 2),
+        Question(26, "Vagabond", "Dans Vagabond, quel sabreur legendaire japonais est suivi ?",
+            listOf("Oda Nobunaga", "Miyamoto Musashi", "Tokugawa Ieyasu", "Saigo Takamori"), 1, 2),
+        Question(27, "Steins;Gate", "Dans Steins;Gate, au-dessus de quel commerce Okabe installe-t-il son labo ?",
+            listOf("Magasin de fruits et legumes", "Boutique de televiseurs a tubes cathodiques", "Maid Cafe", "Sous-sol de gare"), 1, 3),
+        Question(28, "Parasyte", "Dans Parasyte, quelle partie du corps de Shinichi est fusionnee avec Migi ?",
+            listOf("Pied gauche", "Main droite", "Oeil droit", "Coeur"), 1, 2),
+        Question(29, "Code Geass", "Dans Code Geass, quel pouvoir Lelouch obtient-il de C.C. ?",
+            listOf("Lire dans les pensees", "Le Geass (obeissance absolue d'un regard)", "Voler dans les airs", "Invulnerabilite physique"), 1, 2),
+        Question(30, "Mob Psycho 100", "Dans Mob Psycho 100, quel est le metier de Reigen Arataka ?",
+            listOf("Professeur de maths", "Medium/Exorciste a la tete d'un bureau", "Moine bouddhiste", "Vendeur d'encyclopedies"), 1, 3),
+
+        // ============ SPORTS (31-40) ============
+        Question(31, "Haikyuu!!", "Dans Haikyuu!!, a quel poste joue Shoyo Hinata malgre sa taille ?",
+            listOf("Passeur", "Libero", "Central (Middle Blocker)", "Pointu"), 2, 3),
+        Question(32, "Blue Lock", "Dans Blue Lock, quel est l'atout maitre de Yoichi Isagi ?",
+            listOf("Vitesse phenomenale", "Sa vision spatiale globale (Metavision)", "Tirs de puissance brute", "Dribble elastique"), 1, 3),
+        Question(33, "Kuroko's Basket", "Dans Kuroko's Basket, quelle est la specialite de Tetsuya Kuroko ?",
+            listOf("Tirs a 3 points depuis son camp", "Dunks fracassants", "L'invisibilite pour des passes rapides", "Contrer tous les tirs"), 2, 3),
+        Question(34, "Slam Dunk", "Dans Slam Dunk, pourquoi Hanamichi commence-t-il le basket ?",
+            listOf("Pour etre le mieux paye", "Pour impressionner Haruko Akagi", "Sur ordre du medecin", "Pour un pari perdu"), 1, 2),
+        Question(35, "Captain Tsubasa", "Dans Captain Tsubasa, quel est le nom de l'equipe d'enfance de Tsubasa ?",
+            listOf("La Toho", "La Nankatsu (Newteam)", "La Meiwa (Muppet)", "La Furano (Flynet)"), 1, 3),
+        Question(36, "Hajime no Ippo", "Dans Hajime no Ippo, quel est le metier de la mere d'Ippo ?",
+            listOf("Boulangere", "Loueuse de bateaux de peche", "Couturiere", "Fleuriste"), 1, 3),
+        Question(37, "Eyeshield 21", "Dans Eyeshield 21, quel sport est au coeur de l'intrigue ?",
+            listOf("Rugby a XV", "Football Americain", "Baseball", "Hockey sur glace"), 1, 2),
+        Question(38, "Ao Ashi", "Dans Ao Ashi, d'ou Ashito Aoi est-il repere avant de monter a Tokyo ?",
+            listOf("Hokkaido", "La prefecture d'Ehime (Shikoku)", "Okinawa", "Osaka"), 1, 4),
+        Question(39, "Chihayafuru", "Dans Chihayafuru, quel jeu de cartes traditionnel japonais est pratique ?",
+            listOf("Le Shogi", "Le Karuta", "Le Hanafuda", "Le Mahjong"), 1, 3),
+        Question(40, "Yowamushi Pedal", "Dans Yowamushi Pedal, quel type de velo Onoda utilise-t-il au debut ?",
+            listOf("Velo de course carbone", "Velo de ville avec panier (Mamachari)", "VTT suspendu", "BMX de rue"), 1, 2),
+
+        // ============ COMEDIE / ROMANCE / ISEKAI (41-50) ============
+        Question(41, "Spy x Family", "Dans Spy x Family, quel est le nom de code de l'espion qui adopte Anya ?",
+            listOf("Thorn Princess", "Twilight", "Nightfall", "Handler"), 1, 2),
+        Question(42, "Kaguya-sama", "Dans Kaguya-sama, quel est le but ultime de Kaguya et Shirogane ?",
+            listOf("Forcer l'autre a declarer sa flamme en premier", "Meilleure note a l'examen", "Tournoi d'echecs clandestin", "Dissoudre le conseil"), 0, 3),
+        Question(43, "Mushoku Tensei", "Dans That Time I Got Reincarnated as a Slime, sous quel nom le heros est-il reincarne ?",
+            listOf("Gobta", "Rimuru Tempest", "Diablo", "Veldra"), 1, 2),
+        Question(44, "GTO", "Dans Great Teacher Onizuka, quel etait le statut d'Onizuka avant d'enseigner ?",
+            listOf("Policier corrompu", "Chef de gang de motards legendaire", "Banquier international", "Acteur rate"), 1, 3),
+        Question(45, "Assassination Classroom", "Dans Assassination Classroom, quelle est l'apparence de Koro-sensei ?",
+            listOf("Serpent geant", "Poulpe jaune a tentacules", "Cube de gelee verte", "Ours polaire en costume"), 1, 2),
+        Question(46, "Oshi no Ko", "Dans Oshi no Ko, quel est le metier d'Ai Hoshino ?",
+            listOf("Actrice d'horreur", "Idol (chanteuse)", "Mangaka", "Journaliste"), 1, 2),
+        Question(47, "Mushoku Tensei", "Dans Mushoku Tensei, comment s'appelle le protagoniste reincarne ?",
+            listOf("Paul", "Rudeus Greyrat", "Eris", "Sylphiette"), 1, 2),
+        Question(48, "Re:Zero", "Dans Re:Zero, quel pouvoir douloureux Subaru possede-t-il ?",
+            listOf("Change de corps a chaque mort", "Le Retour par la Mort", "Absorbe les pouvoirs du monstre", "Transforme en sel"), 1, 2),
+        Question(49, "Gintama", "Dans Gintama, de quoi souffre la Terre a l'epoque de l'histoire ?",
+            listOf("Invasion de zombies", "Colonisation par les Amanto (extraterrestres)", "Glaciation totale", "Interdiction du sucre"), 1, 3),
+        Question(50, "Your Lie in April", "Dans Your Lie in April, de quel instrument Kousei joue-t-il ?",
+            listOf("Violon", "Piano", "Flute traversiere", "Guitare classique"), 1, 1),
+
+        // ============ RETRO / SF / GHIBLI (51-60) ============
+        Question(51, "Akira", "Dans Akira, sur quel vehicule Kaneda passe-t-il son temps ?",
+            listOf("Skateboard nucleaire", "Moto rouge technologique", "Vehicule blinde", "Mecha bipede"), 1, 3),
+        Question(52, "Ken le Survivant", "Dans Fist of the North Star, de quel art martial Kenshiro est-il heritier ?",
+            listOf("Nanto Seiken", "Hokuto Shinken", "Karaté de l'Ombre", "Kung-Fu sacre"), 1, 3),
+        Question(53, "Cowboy Bebop", "Dans Cowboy Bebop, comment s'appelle le vaisseau de Spike ?",
+            listOf("Millenium Falcon", "Bebop", "Red Tail", "Arcadia"), 1, 2),
+        Question(54, "Ghost in the Shell", "Dans Ghost in the Shell, quel grade porte Motoko Kusanagi ?",
+            listOf("Lieutenant", "Major", "General", "Sergent"), 1, 2),
+        Question(55, "Mon Voisin Totoro", "Dans Mon Voisin Totoro, quel vehicule vivant prend les filles sous la pluie ?",
+            listOf("Train-tortue", "Le Chat-bus (Nekobus)", "Dragon volant", "Hibou geant"), 1, 1),
+        Question(56, "Kenshin", "Dans Rurouni Kenshin, quelle est la particularite de l'epee de Kenshin ?",
+            listOf("Brisee au milieu", "Sabre a lame inversee (Sakabato)", "Bois de bambou sacre", "Lame empoisonnee"), 1, 3),
+        Question(57, "Yu Yu Hakusho", "Dans Yu Yu Hakusho, quel poste Yusuke occupe-t-il apres sa resurrection ?",
+            listOf("Roi des Enfers", "Detective du monde des esprits", "Gardien de porte dimensionnelle", "Chasseur independant"), 1, 2),
+        Question(58, "Ranma 1/2", "Dans Ranma 1/2, en quoi Ranma se transforme-t-il avec de l'eau froide ?",
+            listOf("Panda geant", "Fille rousse", "Porcelet noir", "Canard sauvage"), 1, 2),
+        Question(59, "Gunnm", "Dans Gunnm, de quelle decharge le Dr Ido sauve-t-il Gally ?",
+            listOf("Decharge de la Lune", "Decharge de Zalem", "Egouts de Jeru", "Ruines de New York"), 1, 3),
+        Question(60, "Le Chateau Ambulant", "Dans Le Chateau Ambulant, quel est le nom du demon du feu ?",
+            listOf("Turnip", "Calcifer", "Markl", "Suliman"), 1, 1),
+
+        // ============ SHONEN CLASSIQUES 2 (61-70) ============
+        Question(61, "Dragon Ball Z", "Dans DBZ, quelle transformation Goku atteint-il face a Freezer sur Namek ?",
+            listOf("Super Saiyan 3", "Super Saiyan (niveau 1)", "Super Saiyan Dieu", "Ultra Instinct"), 1, 2),
+        Question(62, "One Piece", "Dans One Piece, qui est le premier compagnon a rejoindre Luffy ?",
+            listOf("Usopp", "Roronoa Zoro", "Nami", "Tony Tony Chopper"), 1, 2),
+        Question(63, "Naruto", "Dans Naruto, quelle technique a ete inventee par Minato Namikaze ?",
+            listOf("Le Chidori", "Le Rasengan (Orbe Tourbillonnant)", "Le Kage Bunshin", "L'Amaterasu"), 1, 3),
+        Question(64, "Bleach", "Dans Bleach, comment s'appelle le monde desertique des Hollows ?",
+            listOf("Rukongai", "Hueco Mundo", "Las Noches", "Soul Society"), 1, 3),
+        Question(65, "Hunter x Hunter", "Dans HxH, quelle espece d'insectes mutants envahit le monde ?",
+            listOf("Fourmis de Feu", "Fourmis Chimeres", "Guepes de l'Ombre", "Scarabees de l'Apocalypse"), 1, 3),
+        Question(66, "Fairy Tail", "Dans Fairy Tail, quelle est la faiblesse commune des Chasseurs de Dragons ?",
+            listOf("Le froid polaire", "Le mal des transports", "Les araignees geantes", "Perdre leur guilde"), 1, 3),
+        Question(67, "Saint Seiya", "Dans Saint Seiya, de quelle couleur est l'armure du Phenix d'Ikki ?",
+            listOf("Vert et blanc", "Bleue et orange/bronze avec reflets de feu", "Noire et violette", "Doree"), 1, 3),
+        Question(68, "Yu-Gi-Oh!", "Dans Yu-Gi-Oh!, quel artefact Yugi met 8 ans a assembler ?",
+            listOf("Oeil du Millenium", "Puzzle du Millenium", "Anneau du Millenium", "Sceptre du Millenium"), 1, 2),
+        Question(69, "JoJo", "Dans JoJo Partie 1, quel objet transforme Dio en vampire ?",
+            listOf("Fiole de sang maudit", "Le Masque de Pierre", "Fleche doree antique", "Bague en rubis"), 1, 2),
+        Question(70, "My Hero Academia", "Dans MHA, quel lycee Deku frequente-t-il ?",
+            listOf("Shiketsu", "Yuei (U.A. High School)", "Ketsubutsu", "Orudera"), 1, 2),
+
+        // ============ SUCCES MODERNES 2 (71-80) ============
+        Question(71, "Demon Slayer", "Dans Demon Slayer, quelle arme les pourfendeurs utilisent-ils ?",
+            listOf("Dagues en argent pur", "Sabres du Soleil (Nichirin)", "Fleches de lumiere", "Haches volcaniques"), 1, 2),
+        Question(72, "Jujutsu Kaisen", "Dans Jujutsu Kaisen, qui est le roi des fleaux ?",
+            listOf("Mahito", "Ryomen Sukuna", "Jogo", "Suguru Geto"), 1, 1),
+        Question(73, "L'Attaque des Titans", "Dans AoT, comment s'appelle le bataillon d'elite de Livai ?",
+            listOf("La Garnison", "Le Bataillon d'Exploration", "Les Brigades Speciales", "L'Armee Royale"), 1, 2),
+        Question(74, "Chainsaw Man", "Dans Chainsaw Man, quels sont les passe-temps de Denji au debut ?",
+            listOf("Lire des livres", "Manger de la bonne nourriture et toucher des seins", "Jouer aux jeux video", "Collectionner des timbres"), 1, 3),
+        Question(75, "Tokyo Ghoul", "Dans Tokyo Ghoul, quel aliment humain les goules peuvent-elles consommer ?",
+            listOf("Pain de seigle", "Le cafe", "Pommes de terre", "Chocolat noir"), 1, 3),
+        Question(76, "One-Punch Man", "Dans OPM, quel est le rang initial de Saitama ?",
+            listOf("Rang S", "Rang C", "Rang A", "Rang B"), 1, 2),
+        Question(77, "Black Clover", "Dans Black Clover, quel demon reside dans le grimoire d'Asta ?",
+            listOf("Lucifero", "Liebe", "Zagred", "Megicula"), 1, 4),
+        Question(78, "Dr. Stone", "Dans Dr. Stone, combien d'annees Senku passe-t-il petrifie ?",
+            listOf("500 ans", "Plus de 3 700 ans", "10 000 ans", "100 ans"), 1, 3),
+        Question(79, "Fire Force", "Dans Fire Force, a quelle generation Shinra appartient-il ?",
+            listOf("1ere generation", "3eme generation", "2eme generation", "4eme generation"), 1, 3),
+        Question(80, "The Promised Neverland", "Dans TPN, comment les enfants appellent-ils Isabella ?",
+            listOf("Soeur", "Maman", "Maitresse", "Directrice"), 1, 1),
+
+        // ============ SEINEN 2 (81-90) ============
+        Question(81, "Death Note", "Dans Death Note, comment s'appelle l'idol amoureuse de Light ?",
+            listOf("Sayu Yagami", "Misa Amane", "Kiyomi Takada", "Shiori Akino"), 1, 2),
+        Question(82, "Berserk", "Dans Berserk, quelle marque maudite Guts porte-t-il sur le cou ?",
+            listOf("Marque du Faucon Blanc", "La Marque du Sacrifice", "Oeil d'Odin", "Cicatrice du Dragon"), 1, 3),
+        Question(83, "Vinland Saga", "Dans Vinland Saga, qui est le pere legendaire de Thorfinn ?",
+            listOf("Askeladd", "Thors (le Troll de Jom)", "Thorkell le Grand", "Le roi Sweyn"), 1, 2),
+        Question(84, "Monster", "Dans Monster, quel est le prenom du jumeau psychopathe ?",
+            listOf("Dieter", "Johan (Liebert)", "Wolfgang", "Roberto"), 1, 2),
+        Question(85, "Evangelion", "Dans Evangelion, comment s'appellent les entites geantes qui attaquent la Terre ?",
+            listOf("Les Titans", "Les Anges", "Les Kaijus", "Les Apotres"), 1, 2),
+        Question(86, "Hell's Paradise", "Dans Hell's Paradise, quel est le statut initial de Gabimaru ?",
+            listOf("Samourai deshonore", "Ninja assassin condamne a mort", "Medecin herboriste", "Pirate des mers"), 1, 3),
+        Question(87, "Kingdom", "Dans Kingdom, quel est le reve ultime de Shin ?",
+            listOf("Premier ministre de Qin", "Plus grand General sous les Cieux", "Assassiner Ei Sei", "Vivre paisiblement"), 1, 3),
+        Question(88, "Bungo Stray Dogs", "Dans Bungo Stray Dogs, d'ou viennent les pouvoirs des personnages ?",
+            listOf("Mouvements de peinture", "Ecrivains celebres et leurs oeuvres", "Constellations", "Plats japonais"), 1, 3),
+        Question(89, "Dorohedoro", "Dans Dorohedoro, quelle est la particularite de Caiman ?",
+            listOf("Pas de bras droit", "Tete de reptile (lezard)", "Corps en fumee noire", "Ailes de chauve-souris"), 1, 3),
+        Question(90, "Golden Kamui", "Dans Golden Kamui, quel peuple autochtone d'Hokkaido est honore ?",
+            listOf("Ryukyuiens", "Les Ainous", "Yamatos", "Mongols"), 1, 3),
+
+        // ============ CULTURE OTAKU (91-100) ============
+        Question(91, "Bakuman", "Dans Bakuman, quel est l'objectif des deux protagonistes ?",
+            listOf("Devenir Seiyuu", "Devenir Mangakas publies dans le Shonen Jump", "Ouvrir une boutique de figurines", "Realisateurs au studio Ghibli"), 1, 2),
+        Question(92, "Manga", "Quel magazine a edite Dragon Ball, One Piece, Naruto et Bleach ?",
+            listOf("Weekly Shonen Magazine", "Weekly Shonen Jump", "Weekly Shonen Sunday", "Young Magazine"), 1, 2),
+        Question(93, "Lucky Star", "Dans Lucky Star, quel quartier de Tokyo est le temple de la culture Otaku ?",
+            listOf("Shibuya", "Akihabara", "Shinjuku", "Harajuku"), 1, 2),
+        Question(94, "Comic Party", "Dans Comic Party, quel evenement de fanzines sert de decor ?",
+            listOf("Tokyo Game Show", "Le Comiket (Comic Market)", "Japan Expo", "San Diego Comic-Con"), 1, 2),
+        Question(95, "Manga", "Comment appelle-t-on le genre de manga pour jeunes filles axe sur la romance ?",
+            listOf("Shonen", "Shojo", "Seinen", "Josei"), 1, 1),
+        Question(96, "Mangaka", "Quel mangaka a cree Uzumaki (Spirale) et Tomie ?",
+            listOf("Naoki Urasawa", "Junji Ito", "Sui Ishida", "Kentaro Miura"), 1, 2),
+        Question(97, "Culture", "Quel terme japonais designe une personne passionnee de mangas et d'animés ?",
+            listOf("Sensei", "Otaku", "Senpai", "Mangaka"), 1, 1),
+        Question(98, "Wotakoi", "Dans Wotakoi, quelle est la passion cachee de Narumi ?",
+            listOf("Tuning de voitures", "Dessin et lecture de mangas Boy's Love (Fujoshi)", "Combats de robots", "Collection de timbres"), 1, 3),
+        Question(99, "Culture", "Comment appelle-t-on l'art de se costumer en personnage de manga ?",
+            listOf("Le Karaoke", "Le Cosplay", "Le Gunpla", "L'Ikebana"), 1, 1),
+        Question(100, "Manga", "Dans quel sens se lisent les pages d'un manga original japonais ?",
+            listOf("Gauche a droite, haut en bas", "Droite a gauche, haut en bas", "Bas en haut, gauche a droite", "En diagonale"), 1, 2)
+    )
+
+    fun getQuestionForLevel(level: Int): Question {
+        return questions.first { it.id == level }
+    }
+
+    /** Retourne 5 questions consecutives selon le niveau (cycle sur 100). */
+    fun getQuestionsForLevel(level: Int): List<Question> {
+        val start = ((level - 1) * 5) % questions.size
+        return (0 until 5).map { i ->
+            questions[(start + i) % questions.size]
+        }
+    }
+
+    fun shuffleChoices(question: Question): Question {
+        val indices = question.choix.indices.shuffled(Random(System.currentTimeMillis()))
+        val newChoix = indices.map { question.choix[it] }
+        val newBonne = indices.indexOf(question.bonneReponse)
+        return question.copy(choix = newChoix, bonneReponse = newBonne)
+    }
+}

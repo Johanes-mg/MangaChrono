@@ -1,0 +1,45 @@
+# Android
+*.iml
+.gradle/
+/local.properties
+local.properties
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# IntelliJ / Android Studio
+/.idea/
+*.iws
+*.ipr
+
+# Systeme
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Build / Logs
+*.log
+*.hprof
+build/
+*/build/
+
+# Keystores
+*.keystore
+*.jks
+*.p12
+keystore.properties
+signing.properties
+
+# Kotlin
+.kotlin/
+
+# Python temporaire
+__pycache__/
+*.pyc

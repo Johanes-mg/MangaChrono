@@ -1,0 +1,15 @@
+# Normalisation
+* text=auto
+gradlew text eol=lf
+*.bat text eol=crlf
+
+# Binaires
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.keystore binary
+*.jks binary
+*.apk binary
+*.aab binary
+*.jar binary
